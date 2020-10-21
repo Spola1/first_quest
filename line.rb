@@ -6,14 +6,18 @@ line << gets.chomp.to_i
 puts 'Введите сторону C'
 line << gets.chomp.to_i
 
-line.sort!
+side1,side2,hypotenuse = line.sort!
 
-if line[0]**2 + line[1]**2 == line[2]**2
+a=side1
+b=side2
+c=hypotenuse
+
+if a**2 + b**2 == c**2
   puts "Треугольник прямоугольный"
 end
 
-if line[0] == line[1] && line[1] == line[2]
+if a == b && b == c
   puts "Треугольник равнобедренный и равносторонний"
-elsif line[0] == line[1] || line[0] == line[2] || line[1] == line[2]
+elsif a == b || a == c || b == c
   puts "Треугольник равнобедренный"
 end

@@ -9,9 +9,10 @@ disc = b**2 - 4 * a * c
 
 if disc < 0
   puts "Нет корней"
-elsif disc == 1
-  puts "Результат: #{-b/(2*a)}"
+elsif disc == 0
+  puts "Результат: #{ -b/(2*a) } "
 else
-  puts "x1 равен: #{(-b + Math.sqrt(disc))/(2*a)}"
-    puts "x1 равен: #{(-b - Math.sqrt(disc))/(2*a)}"
-  end
+  dic = Math.sqrt(disc)
+  puts "x1 равен: #{ (-b + dic)/(2*a) } "
+  puts "x1 равен: #{ (-b - dic)/(2*a) } "
+end
